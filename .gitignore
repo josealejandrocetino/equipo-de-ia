@@ -1,0 +1,45 @@
+# ── Nada personal puede entrar aquí: este repo es público ──
+
+# Configuración local de Claude Code
+.claude/settings.local.json
+settings.local.json
+.mcp.json
+.env
+*.local
+
+# Contexto personal y material de clientes
+Context/
+Work/
+content-os/
+clientes/
+footage/
+
+# Material pesado / de trabajo
+*.mp4
+*.mov
+*.mp3
+*.wav
+*.aep
+*.aep.lock
+*.psd
+*.ai
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+wx-env/
+
+# Node
+node_modules/
+
+# Respaldos
+*.bak
+*~

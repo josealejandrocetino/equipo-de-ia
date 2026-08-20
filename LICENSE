@@ -1,0 +1,46 @@
+Licencia de uso — Equipo de IA (el Editor)
+Copyright (c) 2026 Jose Alejandro Cetino. Todos los derechos reservados.
+
+QUÉ PUEDES HACER
+
+  · Usar este sistema para editar tu propio contenido.
+  · Usarlo para editar el contenido de tus clientes, y cobrar por ese trabajo.
+  · Modificarlo para tu uso: cambiar los estilos, ajustar los scripts,
+    adaptarlo a tu forma de trabajar.
+  · Instalarlo en las computadoras que uses tú.
+
+QUÉ NO PUEDES HACER
+
+  · Revenderlo, sublicenciarlo o cobrar por darle acceso a otra persona.
+  · Redistribuirlo — ni entero ni por partes — de forma pública o privada.
+  · Ofrecerlo como producto propio, con otro nombre o con otra marca.
+  · Publicarlo en otro repositorio, curso, comunidad o plataforma.
+  · Quitar o alterar este aviso de licencia.
+
+La licencia es para ti. Cada persona que quiera usarlo tiene que conseguir
+la suya.
+
+SOBRE LOS ESTILOS QUE TÚ CREES
+
+  Los estilos, plantillas y ajustes que hagas tú son tuyos. Esta licencia
+  no reclama nada sobre tu trabajo ni sobre los videos que produzcas.
+
+SIN GARANTÍA
+
+  El software se entrega TAL CUAL, sin garantía de ningún tipo, explícita
+  ni implícita. Quien lo usa asume el riesgo. El autor no responde por
+  daños, pérdida de archivos, ni por resultados de ningún tipo derivados
+  de su uso.
+
+DEPENDENCIAS DE TERCEROS
+
+  Este sistema usa programas de terceros — entre otros ffmpeg, WhisperX,
+  Python, Node.js, Google Chrome y Claude Code — cada uno con su propia
+  licencia y sus propios términos. Esta licencia cubre únicamente el
+  código y la documentación de este repositorio, no esos programas ni las
+  suscripciones que puedan requerir.
+
+SI SE INCUMPLE
+
+  El permiso de uso termina automáticamente al incumplir cualquiera de los
+  puntos de arriba.

@@ -1,0 +1,14 @@
+{
+  "name": "equipo-de-ia",
+  "description": "El equipo de IA para infoproductores: sistemas instalables que hacen el trabajo de edición, diseño y contenido.",
+  "owner": {
+    "name": "Equipo de IA"
+  },
+  "plugins": [
+    {
+      "name": "equipo-de-ia",
+      "source": "./",
+      "description": "Pipeline de edición de video con IA para Mac y Windows: corta silencios, elige tomas, pone subtítulos, rótulos, apoyos visuales y sonidos. Animación opcional con After Effects."
+    }
+  ]
+}
