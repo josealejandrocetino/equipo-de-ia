@@ -6,8 +6,8 @@
 cd "$(dirname "$0")" || exit 1
 DIR="$(pwd)"
 
-# ⚠️ Al publicar en GitHub, cambiar por "usuario/repositorio".
-ORIGEN_PLUGIN="$DIR"
+# De aquí salen las actualizaciones. Si algún día cambia el repositorio, se cambia aquí.
+ORIGEN_PLUGIN="josealejandrocetino/equipo-de-ia"
 
 SIMULAR=false
 [ "$1" = "--simular" ] && SIMULAR=true

@@ -7,8 +7,8 @@ param([switch]$Simular)
 $ErrorActionPreference = "Continue"
 $DIR = Split-Path (Split-Path $MyInvocation.MyCommand.Path)
 
-# ⚠️ Al publicar en GitHub, cambiar por "usuario/repositorio".
-$ORIGEN_PLUGIN = $DIR
+# De aqui salen las actualizaciones. Si algun dia cambia el repositorio, se cambia aqui.
+$ORIGEN_PLUGIN = "josealejandrocetino/equipo-de-ia"
 
 function Paso($t) { Write-Host ""; Write-Host ("▸ " + $t) -ForegroundColor White }
 function Ya($t)   { Write-Host ("  ya está   " + $t) -ForegroundColor Green }
