@@ -14,7 +14,9 @@ realmente falte; no lo conviertas en un interrogatorio.
   extenderla libremente?
 - **Para quién es** — contenido propio o de un cliente. Si es de cliente, pide su tono, su
   paleta y su audiencia antes de construir.
-- **Formato y duración** — vertical 9:16 (el único soportado hoy), duración aproximada.
+- **Formato y duración** — vertical 9:16 o horizontal 16:9, y duración aproximada.
+  ⛔ **Pregúntalo, no lo deduzcas del crudo:** se puede grabar en horizontal para montar un
+  estilo vertical de dos zonas. El formato del archivo no dice el formato de salida.
 - **¿Estilo nuevo o reutilización?** Si es reutilización, apunta a la carpeta del estilo:
   puede ser uno de los que trae el plugin (`estilos/` dentro de la skill) o uno propio en
   `content-os/styles/proven/`. **Enséñale los que ya tiene antes de construir uno nuevo.**

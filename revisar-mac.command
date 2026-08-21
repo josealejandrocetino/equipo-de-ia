@@ -92,6 +92,10 @@ if [ -z "$ENCONTRADA" ]; then
   done
 fi
 if [ -n "$ENCONTRADA" ]; then
+  # si la movieron, se guarda la ruta nueva y el aviso no vuelve a salir
+  if [ -n "$GUARDADA" ] && [ "$GUARDADA" != "$ENCONTRADA" ]; then
+    printf 'TRABAJO=%s\n' "$ENCONTRADA" > "$HOME/.equipo-de-ia/config" 2>/dev/null
+  fi
   ok "content-os" "${ENCONTRADA/#$HOME/~}"
   N_VID=$(ls -1 "$ENCONTRADA/content-os/raw-footage" 2>/dev/null | wc -l | tr -d ' ')
   printf "  %-32s %s\n" "Videos en raw-footage" "$N_VID"

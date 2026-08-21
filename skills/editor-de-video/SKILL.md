@@ -1,8 +1,8 @@
 ---
 name: editor-de-video
 description: >-
-  Pipeline completo de edición de video con IA: convierte footage crudo 9:16 (hablando a
-  cámara, con tomas repetidas y pausas) en un video terminado con cortes, subtítulos,
+  Pipeline completo de edición de video con IA: convierte footage crudo (hablando a cámara,
+  con tomas repetidas y pausas) en un video terminado con cortes, subtítulos,
   rótulos, apoyos visuales y diseño de sonido. Cubre el proceso entero — brief, corte
   automático con WhisperX, acabado con ffmpeg, animación opcional en After Effects vía
   MCP, iteración con feedback en lenguaje natural, guardado del estilo como plantilla
@@ -18,9 +18,12 @@ description: >-
 > **El trabajo:** la persona solo graba. Todo lo demás — elegir tomas, cortar, animar,
 > sonorizar, iterar y escalar — pasa por aquí.
 
-**Formato actual: solo vertical 9:16 (short-form).** El horizontal para YouTube es una
-extensión futura; no la improvises. Si te piden long-form, dilo: no está probado de punta
-a punta.
+**Vertical 9:16 y horizontal 16:9, los dos.** El vertical tiene más estilos probados; el
+horizontal está verificado en producción para YouTube. **Pregunta el formato en el brief** —
+no lo deduzcas del crudo, porque se puede grabar en horizontal para montar en vertical.
+
+⛔ **Antes de reencuadrar, confirma.** Un crudo horizontal puede ser para un video horizontal
+o el material de un estilo vertical de dos zonas. Son cosas distintas y no se adivinan.
 
 **Principio de fondo:** el criterio estético lo pone la persona o un video de referencia.
 Tú ejecutas con precisión, iteras rápido y no te desvías. **Nunca inventes un estilo desde
@@ -41,7 +44,7 @@ Revisa qué está disponible **hoy** y elige el camino en consecuencia. No asuma
 ### La regla de degradación (importante)
 
 **Si el puente de After Effects no está disponible, NO te detengas.** Baja al camino de
-ffmpeg y entrega igual: un video cortado, reencuadrado a 9:16 y publicable. Sin motion
+ffmpeg y entrega igual: un video cortado, en el formato que pidan, y publicable. Sin motion
 graficos finos, pero real. Avisa qué camino tomaste y qué se pierde.
 
 Orden de preferencia: **After Effects (mejor) → ffmpeg (respaldo siempre disponible)**.

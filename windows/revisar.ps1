@@ -97,6 +97,10 @@ if (-not $trabajo) {
     Select-Object -First 1 -ExpandProperty FullName
 }
 if ($trabajo) {
+  # si la movieron, se guarda la ruta nueva y el aviso no vuelve a salir
+  if ($guardada -and $guardada -ne $trabajo) {
+    try { "TRABAJO=$trabajo" | Set-Content -Path $cfg -Encoding UTF8 } catch {}
+  }
   Ok "content-os" $trabajo
   $n = (Get-ChildItem "$trabajo\content-os\raw-footage" -ErrorAction SilentlyContinue).Count
   Write-Host ("  {0,-32} {1}" -f "Videos en raw-footage", $n)
