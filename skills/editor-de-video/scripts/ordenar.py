@@ -73,6 +73,30 @@ def ordenar(carpeta, simular=False):
         print("  ⬜ %s — sin versiones/, no se toca" % nombre); return
     destino = os.path.join(carpeta, PROCESO)
     sueltos = []
+
+    def fusionar(org, dst):
+        """⛔⛔ NUNCA borrar el destino.
+        Antes esto hacía `shutil.rmtree(dst)` cuando el destino ya existía. En un video real
+        había una carpeta `assets/` VACÍA en la raíz y una `proceso/assets/` LLENA con 1.5 GB
+        de secuencias PNG, el corte 9:16 y los wav de música: el rmtree se llevó la llena para
+        meter la vacía. Se perdió todo el material generado y hubo que volver a producirlo.
+        El script promete «no borra nada, mueve» — ahora lo cumple.
+        Dos carpetas se FUNDEN; un archivo que choca se guarda con sufijo."""
+        if not os.path.exists(dst):
+            shutil.move(org, dst); return
+        if os.path.isdir(org) and os.path.isdir(dst):
+            for hijo in os.listdir(org):
+                fusionar(os.path.join(org, hijo), os.path.join(dst, hijo))
+            if not os.listdir(org):
+                os.rmdir(org)
+            return
+        base, ext = os.path.splitext(dst)
+        i = 2
+        while os.path.exists("%s-%d%s" % (base, i, ext)): i += 1
+        shutil.move(org, "%s-%d%s" % (base, i, ext))
+        print("      ⚠ %s ya existía en proceso/: el de la raíz se guardó como %s"
+              % (n, os.path.basename("%s-%d%s" % (base, i, ext))))
+
     for n in sorted(os.listdir(carpeta)):
         if n in SE_QUEDAN or n == PROCESO or n.startswith("✅"):
             continue
@@ -87,11 +111,7 @@ def ordenar(carpeta, simular=False):
         return
     os.makedirs(destino, exist_ok=True)
     for n in sueltos:
-        org = os.path.join(carpeta, n)
-        dst = os.path.join(destino, n)
-        if os.path.exists(dst):
-            shutil.rmtree(dst) if os.path.isdir(dst) else os.remove(dst)
-        shutil.move(org, dst)
+        fusionar(os.path.join(carpeta, n), os.path.join(destino, n))
     # enlaces para que los scripts sigan encontrando lo que esperan
     for objetivo, enlace in [("../versiones", os.path.join(destino, "versiones"))]:
         if not os.path.lexists(enlace):
