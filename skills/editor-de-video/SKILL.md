@@ -85,6 +85,18 @@ Después pregunta qué tipo de trabajo es:
 
 ## FASE 1 — El brief
 
+⛔ **Si el video llega arrastrado suelto** (no está ya dentro de `content-os/raw-footage/`),
+ubícalo antes de seguir con el brief:
+
+1. Si **no existe** `content-os/raw-footage/<fecha-de-hoy>/`, créala y proponla:
+   *"Voy a crear la carpeta `<fecha-de-hoy>` para este video, ¿está bien?"*
+2. Si **ya existe** una carpeta de hoy (porque ya hay otro video de hoy dentro), no la
+   reuses — crea `<fecha-de-hoy>-2`, o el siguiente número libre si ya hay más de una.
+   Mismo aviso de una línea antes de moverlo.
+3. Solo después de mover el archivo, sigue con el resto del brief.
+
+**Nunca crees la carpeta sin decirlo primero** — es una línea, no un formulario.
+
 Consigue lo mínimo antes de construir. Checklist completo en `references/05-brief.md`.
 
 Lo indispensable:

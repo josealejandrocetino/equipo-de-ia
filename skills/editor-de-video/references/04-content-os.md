@@ -21,6 +21,7 @@ content-os/
 │   └── experimental/            ← estilos en prueba, todavía no confirmados
 ├── raw-footage/                 ← CORTO FORMATO en producción, una carpeta por FECHA
 │   └── <fecha>/                    el archivo de cámara suelto + assets/ + versiones/
+│       (dos videos el mismo día: <fecha>-2, <fecha>-3... — nunca se comparte carpeta)
 ├── youtube/                     ← LARGO FORMATO en producción, una carpeta por VIDEO
 │   └── <fecha>-<nombre>/           misma forma: cámara suelto + assets/ + versiones/
 └── b-roll/                      ← material que se REUTILIZA entre videos
