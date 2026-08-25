@@ -1,7 +1,7 @@
 {
   "name": "equipo-de-ia",
   "description": "Pipeline de edición de video con IA para Mac y Windows: corta silencios, elige tomas, pone subtítulos, rótulos, apoyos visuales y sonidos. Animación opcional con After Effects.",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": {
     "name": "Jose Alejandro Cetino"
   }

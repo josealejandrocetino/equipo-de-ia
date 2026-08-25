@@ -38,14 +38,25 @@ Revisa qué está disponible **hoy** y elige el camino en consecuencia. No asuma
 | Necesitas | Cómo verificar | Si falta |
 |---|---|---|
 | ffmpeg | `ffmpeg -version` | → `references/07-instalacion.md` |
-| WhisperX | `ls ~/.equipo-de-ia/wx-env/bin/python` | → `references/07-instalacion.md` |
+| WhisperX | `~/.equipo-de-ia/wx-env/bin/python -c "import whisperx"` | → `references/07-instalacion.md` |
 | Puente MCP de After Effects | ¿aparecen herramientas de AE en esta sesión? | usa el camino ffmpeg |
+
+⛔⛔ **A WhisperX no le hagas `ls` — ejecútalo de verdad.** Que el archivo exista no significa
+que corra: en macOS, Gatekeeper puede bloquear un binario recién instalado aunque esté en el
+disco. Si el `import whisperx` de arriba falla (aunque el archivo exista), **WhisperX NO está
+disponible** — es el mismo caso que si faltara.
 
 ### La regla de degradación (importante)
 
 **Si el puente de After Effects no está disponible, NO te detengas.** Baja al camino de
 ffmpeg y entrega igual: un video cortado, en el formato que pidan, y publicable. Sin motion
 graficos finos, pero real. Avisa qué camino tomaste y qué se pierde.
+
+⛔⛔ **Si WhisperX falla, es al revés: SÍ te detienes.** Sin WhisperX no hay corte por
+silencios ni bordes de palabra exactos — es el corazón del pipeline, no un extra. **No
+entregues "solo subtítulos" como si fuera el resultado completo.** Dile a la persona
+exactamente qué falló y mándala a `references/07-instalacion.md` para arreglarlo antes de
+seguir. Un resultado a medias sin avisar es peor que pararse a tiempo.
 
 Orden de preferencia: **After Effects (mejor) → ffmpeg (respaldo siempre disponible)**.
 
