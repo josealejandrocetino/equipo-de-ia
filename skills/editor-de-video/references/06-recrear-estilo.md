@@ -1,7 +1,31 @@
 # Recrear un estilo desde una referencia
 
-De un link a un estilo guardado y reutilizable. **Esta es la máquina de conseguir estilos** —
-el motivo por el que la librería crece sola con el tiempo.
+De un link — o de video(s) que la persona sube directamente — a un estilo guardado y
+reutilizable. **Esta es la máquina de conseguir estilos** — el motivo por el que la
+librería crece sola con el tiempo.
+
+## Camino B: la referencia es un archivo subido, no un link
+
+Cuando adjuntan uno o varios videos y dicen algo como *"estos son estilo `<nombre>`, ayúdame
+a crear el estilo en base a esto"* — **no les pidas que los guarden ellos mismos.** Antes
+de nada:
+
+1. Guárdalos tú, sin pedir permiso — es trabajo rutinario, directamente en
+   `content-os/styles/experimental/`, **sueltos**, sin crear todavía la subcarpeta del
+   estilo (esa se crea recién en la Fase 5, cuando ya tenga `dna.md`).
+2. Nómbralos `<nombre-estilo>-referencia-1.<ext>`, `-2`, `-3`… en el orden en que los
+   subieron. Conserva la extensión original.
+3. Si ya existen archivos `<nombre-estilo>-referencia-N.<ext>` de una sesión anterior
+   (agregaron más referencias al mismo estilo), sigue numerando desde el siguiente número
+   libre — no sobrescribas ni reordenes los que ya están.
+4. Avisa en una línea dónde quedaron: *"Guardados en `content-os/styles/experimental/` como
+   `<nombre-estilo>-referencia-1.mp4` (y -2, -3…)."*
+5. Sigue directo con **El proceso** de abajo, usando esos archivos como material — es
+   exactamente el mismo análisis que si hubiera llegado un link, solo que aquí ya tienes el
+   video en mano en vez de tener que localizarlo.
+
+Esto reemplaza la vuelta manual de entrar a `content-os` → `styles` → `experimental` y
+copiar el archivo con el nombre correcto — la hace el editor, no la persona.
 
 ## De dónde salen los estilos
 
