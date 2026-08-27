@@ -97,6 +97,23 @@ ubícalo antes de seguir con el brief:
 
 **Nunca crees la carpeta sin decirlo primero** — es una línea, no un formulario.
 
+⛔ **Si llegan varios videos sueltos a la vez** (lote del mismo día, ej. 5 videos para
+editar hoy), no pidas aprobación video por video — es **una sola aprobación para todo el
+lote**:
+
+1. Antes de mover nada, propón las carpetas completas de una vez:
+   *"Voy a crear `<fecha-de-hoy>`, `<fecha-de-hoy>-2`, `<fecha-de-hoy>-3`... hasta
+   `<fecha-de-hoy>-N` y mover cada video crudo a la suya, ¿está bien?"*
+2. Con el ok, crea las N carpetas correlativas (la primera sin sufijo, el resto `-2`,
+   `-3`, …) y mueve cada video crudo a la suya.
+3. **A partir de ahí no vuelvas a pedir permiso de carpetas para ese lote** — ya quedó
+   cubierto por la aprobación inicial. El resto de reglas duras (nunca borrar, nunca
+   publicar) siguen intactas.
+4. Procesa el lote **en cola, uno por uno**: corre el pipeline completo (Fases 1-6) del
+   primer video, muéstraselo, espera su aprobación o feedback y aplícalo si hace falta, y
+   solo entonces pasas al siguiente. No edites los N videos en paralelo ni adelantes
+   trabajo del segundo antes de cerrar el primero.
+
 Consigue lo mínimo antes de construir. Checklist completo en `references/05-brief.md`.
 
 Lo indispensable:
