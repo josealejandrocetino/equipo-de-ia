@@ -43,3 +43,14 @@ node_modules/
 # Respaldos
 *.bak
 *~
+
+# Documentos internos de oferta y precios (repo publico)
+Oferta-*.md
+
+# Copy de landings (repo publico)
+Landing-*.md
+
+Skool-*.md
+
+# Guiones de VSL (repo publico)
+VSL-*.md

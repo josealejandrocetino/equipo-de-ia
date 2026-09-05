@@ -65,6 +65,30 @@ python3 "$SK/build_wx.py" \
 
 ---
 
+---
+
+## ⛔ Paso obligatorio: verificar los bordes contra el audio
+
+**Verificado el 2026-09-02 sobre un VSL real.** WhisperX alinea texto contra fonemas, y con los
+**numerales falla feo**: a «diecisiete» le asignó **0.06 s** de duración — cuatro sílabas en un
+parpadeo. El corte se hizo sobre ese final falso y la palabra salió mocha. Lo mismo con la última
+palabra de muchas frases.
+
+**El audio no miente.** Después de construir `clip_infos.json` y ANTES de renderizar:
+
+```bash
+python3 "$SK/verificar_bordes.py" "$WORK/audio/CLIP.mp3" "$WORK/work/ci.json" 30 --escribir
+```
+
+Detecta por energía dónde hay voz de verdad; si el final de un clip cae **dentro** de un tramo con
+voz, es que la palabra seguía sonando y **estira el clip** hasta que la voz termina.
+
+Es barato y solo toca lo que está mal: en la prueba real corrigió **2 clips de 52** — exactamente
+los dos que la persona detectó de oído. **No te saltes este paso:** una palabra mocha es el defecto
+que más se nota y el que más confianza quita.
+
+---
+
 ## Paso 3 — EL HILO ROJO (el paso de editor)
 
 Lee las palabras de WhisperX. Escribe `beats.txt`, un beat por línea: `INICIO FIN etiqueta`.

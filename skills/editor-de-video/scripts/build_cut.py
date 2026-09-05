@@ -40,7 +40,12 @@ def speech_regions(a, b):
 
 # 2) words (only for clean edges)
 d = json.load(open(WORDS))
-W = [(w["s"], w["e"], w["w"]) for s in d for w in s.get("words", [])]
+# whisperx_align.py entrega una lista PLANA de palabras; otras fuentes las
+# entregan anidadas en segmentos. Se aceptan las dos o el corte sale vacío.
+if d and isinstance(d[0], dict) and "words" in d[0]:
+    W = [(w["s"], w["e"], w["w"]) for s in d for w in s.get("words", [])]
+else:
+    W = [(w["s"], w["e"], w["w"]) for w in d]
 
 infos, rec, dbg = [], 0, []
 for line in open(BEATS):
